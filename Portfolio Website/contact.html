@@ -1,0 +1,87 @@
+<html>   
+	<head>    
+		<title>Contact  </title>  
+		<style>   
+			Body {  
+			  font-family: Calibri, Helvetica, sans-serif;  
+			  background-color: #00CED1;  
+			}  
+			button {   
+				   
+				   width: 100%;  
+					color: black;   
+					padding: 15px;   
+					margin: 10px 0px;   
+					border: none;   
+					cursor: pointer;   
+					 }   
+			 form {   
+					border: 1px solid #000000;   
+				}   
+			 input[type=text], input[type=password],input[type=email] {   
+					width: 20%;   
+					margin: 8px 0;  
+					padding: 12px 20px;   
+					display: inline-block;   
+					border: 2px solid black;   
+					box-sizing: border-box;   
+				}  
+			 button:hover {   
+					opacity: 0.7;   
+				}   
+			  .cancelbtn {   
+					width: 100; 
+					padding: 10px 18px;  
+					margin: 10px 5px;  
+				}   
+					
+				 
+			 .container {   
+					padding: 25px;   
+					background-color: #46a832;  
+				}   
+			</style> 
+			<script>
+				function myvalidate()
+				{
+					var phno=document.myform.pnumber.value;
+					if(phno.length!=10)
+					{
+						window.alert("Enter Valid Phone Number");
+						document.myform.pnumber.focus();
+						return false;
+					}
+					window.alert("Message Sent SuccessFully....");
+					return true;
+				}
+			</script>
+	</head>    
+	<body>  
+		<form name="myform"  onsubmit="return myvalidate()" action="home.html">
+			<div class="container">
+				<center><h1>Contact Me</h1>
+				<center>
+				<hr>
+				
+				<label for="name"><b>Name</label><br>
+				<input type="text" placeholder="Name" name="f-name" required><br>
+
+				<label for="email"><b>Email</b></label><br>
+				<input type="email" placeholder="Enter Email" name="email" required  ><br>
+				
+				<label for="Number"><b>Phone Number</label><br>
+				<input type="text" placeholder="Contact Number" name="pnumber" required><br>
+				
+				<label for="Message"><b>Message</label><br>
+				<input type="text" placeholder="Enter the message" name="msg" required><br>
+
+				<div class="clearfix">
+				  <button type="button" class="cancelbtn">Cancel</button>
+				 
+				  <input type="submit" style="height:40px; width:100px">
+				</div>
+			 </center>
+			</div>
+		</form>     
+	</body>     
+</html>  
